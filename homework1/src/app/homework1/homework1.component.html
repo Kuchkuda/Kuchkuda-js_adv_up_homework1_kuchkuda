@@ -1,0 +1,15 @@
+<div class="contain">
+    <div class="tittle">List of prohibited words:</div>
+    <div class="centrBlock">
+        <div class="textBad">Bad words:
+            <div class="badWord" [textContent]="badWord"></div>
+        </div>
+        <div class="blockBtn">
+            <input type="text" class="text" [(ngModel)]="word" placeholder="word here...">
+            <button class="add" type="button" (click)="add()">Add</button>
+            <button class="reset" type="button" (click)="reset()">Reset</button>
+        </div>
+        <textarea class="textarea" cols="30" rows="10" [(ngModel)]="textArea"></textarea>
+        <button class="cenzor" (click)="cenzor()" >Cenzor</button>
+    </div>
+</div>
