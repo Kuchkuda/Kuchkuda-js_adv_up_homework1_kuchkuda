@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(160, 158, 158);
+}
+.topText{
+    text-align: center;
+    font-size: 30px;
+}
+.contain {
+    padding: 50px;
+    display: flex;
+}
+
+.leftBox,
+.rightBox {
+    width: 50%;
+    padding: 15px;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+}
+
+.thorpCol {
+    box-sizing: border-box;
+    text-align: center;
+    width: 5%;
+}
+
+.loginCol,
+.passCol,
+.emailCol {
+    text-align: center;
+    width: 20%;
+    margin: 5px;
+}
+
+
+.loginBox,
+.passBox,
+.emailBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginText,
+.passText,
+.emailText {
+    margin: 10px 0px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.editCol,
+.deleteCol {
+    text-align: center;
+    width: calc(35%/2);
+  
+}
+.editBtn{
+    background-color: rgb(231, 198, 10);
+    height: 30px;
+    border-radius: 5px  0px  0px  5px;
+    border: 1px solid transparent;
+}
+.deletBtn{
+  background-color:red;
+  color: white;
+  height: 30px;
+  border-radius: 0px  5px  5px  0px;
+  border: 1px solid transparent;
+}
+.mainBox {
+    width: 100%;
+}
+
+.addUser,.editUser{
+    border: 2px solid green;
+    color: green;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+}
+.creatBox{
+    display: flex;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+.empty{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}

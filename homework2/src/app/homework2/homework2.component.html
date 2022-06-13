@@ -1,0 +1,46 @@
+<div class="topText">Angulyar User Task</div>
+<div class="contain">
+  <div class="leftBox">
+    <div class="loginBox">Login
+      <input type="text" placeholder="Enter login (4 -16)" (input)="login()" [(ngModel)]="loginValue"
+        [ngStyle]="{'border-color': checkLogin ? 'green':'red','outline-color': checkLogin ? 'green':'red'}"
+        class="loginText">
+    </div>
+    <div class="passBox">Password
+      <input type="password" placeholder="Enter password (4 -16)" (input)="pass()" [(ngModel)]="passValue"
+        [ngStyle]="{'border-color': checkPass ? 'green':'red','outline-color': checkPass ? 'green':'red'}"
+        class="passText">
+    </div>
+    <div class="emailBox">Email address
+      <input type="text" placeholder="Enter email" (input)="email()" [(ngModel)]="emailValue"
+        [ngStyle]="{'border-color': checkEmail ? 'green':'red','outline-color': checkEmail ? 'green':'red'}"
+        class="emailText">
+    </div>
+    <div class="btnBox">
+      <button *ngIf="!editStatus" type="button" class="editUser" (click)="save()" >Save user</button>
+      <button *ngIf="editStatus" type="button" class="addUser" (click)="add()">Add user</button>
+    </div>
+  </div>
+  <div class="rightBox">
+    <div class="title">
+      <div class="thorpCol">#</div>
+      <div class="loginCol">Login</div>
+      <div class="passCol">Password</div>
+      <div class="emailCol">Email</div>
+      <div class="editCol">Edit</div>
+      <div class="deleteCol">Delete</div>
+    </div>
+    <div class="creatBox" *ngFor="let elem of arrElem;index as i">
+      <div class="thorpCol">{{i+1}}</div>
+      <div class="loginCol">{{elem.login}}</div>
+      <div class="passCol">{{elem.pass}}</div>
+      <div class="emailCol">{{elem.email}}</div>
+      <button class="editCol editBtn" type="button" (click)="edit(i)">Edit</button>
+      <button class="deleteCol deletBtn" type="button"[disabled]="!editStatus" (click)="delete(i)">Delete</button>
+    </div>
+    <ng-container *ngIf="arrElem.length===0">
+        <div class="empty">Not found user</div>
+    </ng-container>
+    
+  </div>
+</div>
